@@ -14,17 +14,23 @@ PC::PC(string m, double p, Keyboard* k, Headphohes* h, Monitor* mon, Mouse* ms, 
 
 double PC::GetPrice()
 {
-	return 0.0;
+	double fullPrice;
+	fullPrice = price + headphones->GetPrice() + keyboard->GetPrice() + monitor->GetPrice() + mouse->GetPrice() + ram.GetPrice() + ssd.GetPrice();
+	cout << "Full PC price: " << fullPrice << endl;
+	return fullPrice;
 }
 
 void PC::Output()
 {
-	cout << "Model: " << model <<
-	"Price: " << price <<
-		"Headphones: " << headphones->GetModel() <<
-		""
-
-		
-		<< endl;
+	cout <<
+		endl << 
+		"Headphones: " << headphones->GetModel() << "\t Headphones price: " << headphones->GetPrice() << endl <<
+		"Keyboard: " << keyboard->GetModel() << "\t Keyboard price: " << keyboard->GetPrice() << endl <<
+		"Monitor: " << monitor->GetModel() << "\t\t Monitor price: " << monitor->GetPrice() << endl <<
+		"Mouse: " << mouse->GetModel()  << "\t\t Mouse price: " << mouse->GetPrice() <<  endl <<
+		"RAM: " << ram.GetModel() << "\t\t RAM price: " << ram.GetPrice() << endl <<
+		"SSD: " << ssd.GetModel() << "\t\t SSD price: " << ssd.GetPrice() << endl <<
+		"PC Model: " << model << "\t PC Price: " << price << endl <<
+		"Full PC price:" << GetPrice() << endl;
 
 }
