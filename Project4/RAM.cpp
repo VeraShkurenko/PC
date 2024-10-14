@@ -31,3 +31,4 @@ void RAM::SetPrice(double pr)
 	price = pr;
 }
 
+

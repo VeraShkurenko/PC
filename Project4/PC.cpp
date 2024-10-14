@@ -34,3 +34,4 @@ void PC::Output()
 		"Full PC price:" << GetPrice() << endl;
 
 }
+

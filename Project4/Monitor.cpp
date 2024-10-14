@@ -32,3 +32,4 @@ void Monitor::SetPrice(double pr)
 }
 
 
+

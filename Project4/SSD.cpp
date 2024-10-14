@@ -30,3 +30,4 @@ void SSD::SetPrice(double pr)
 {
 	price = pr;
 }
+
